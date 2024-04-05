@@ -200,7 +200,7 @@ def create_sounds(exp_info):
     if config.sound_by_accuracy is None:
         # One sound, independently of accuracy
         exp_info.sounds_ok = [common.load_sound(config, config.sound_ok)]
-        exp_info.sounds_ok_max_ep_err = [1]
+        exp_info.sounds_ok_max_ep_err = np.array([1])
         return
 
     #-- Validate configuration
